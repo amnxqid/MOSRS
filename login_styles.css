@@ -1,0 +1,74 @@
+/* Styles for the enhanced Login Page */
+body.login-page {
+    background: #f0f2f5;
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.login-card {
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    border: none;
+    overflow: hidden; /* Important for the two-column layout */
+}
+
+.login-form-side {
+    padding: 3rem;
+}
+
+.login-branding-side {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+}
+
+.login-branding-side .brand-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.login-branding-side h2 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.login-branding-side p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* Form Enhancements */
+.form-floating > .form-control,
+.form-floating > .form-select {
+    height: calc(3.5rem + 2px);
+    line-height: 1.25;
+}
+
+.form-floating > label {
+    padding: 1rem 0.75rem;
+}
+
+.form-floating > .form-control:focus ~ label {
+    opacity: 0.65;
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    opacity: 0.65;
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}

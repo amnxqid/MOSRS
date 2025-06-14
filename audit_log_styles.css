@@ -1,0 +1,122 @@
+/* Styles for the enhanced Audit Log timeline */
+
+.audit-timeline {
+    position: relative;
+    padding: 1rem 0;
+    list-style: none;
+}
+
+.audit-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40px;
+    height: 100%;
+    width: 4px;
+    background: #e9ecef;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 70px; /* Space for icon */
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 20px; /* ( (40px icon width / 2) + 20px padding ) - (4px line width / 2) = ~40px */
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 10;
+    box-shadow: 0 0 0 4px #f8f9fa; /* Creates a clean gap around the icon */
+}
+
+/* Color coding for icons based on action */
+.timeline-icon.action-login { background-color: #198754; } /* Green */
+.timeline-icon.action-logout { background-color: #6c757d; } /* Gray */
+.timeline-icon.action-create { background-color: #0d6efd; } /* Blue */
+.timeline-icon.action-update { background-color: #ffc107; } /* Yellow */
+.timeline-icon.action-delete { background-color: #dc3545; } /* Red */
+.timeline-icon.action-failure { background-color: #fd7e14; } /* Orange */
+.timeline-icon.action-system { background-color: #6f42c1; } /* Purple */
+
+.timeline-content {
+    background: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-action {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #343a40;
+}
+
+.timeline-timestamp {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.timeline-user {
+    font-weight: 500;
+}
+
+.timeline-details dl {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+.timeline-details dt {
+    font-weight: 600;
+    color: #6c757d;
+    width: 120px; /* Align definition terms */
+    float: left;
+    clear: left;
+}
+.timeline-details dd {
+    margin-left: 130px; /* Space for the term */
+    word-break: break-word;
+}
+
+.timeline-changes {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #ced4da;
+}
+
+.change-box {
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-height: 150px;
+    overflow-y: auto;
+}
+.change-box.old-value {
+    background-color: #ffebe9;
+    border: 1px solid #f5c6cb;
+}
+.change-box.new-value {
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+}

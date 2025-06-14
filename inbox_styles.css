@@ -1,0 +1,94 @@
+/* --- Styles for Inbox Page (inbox.php) --- */
+
+.page-title-inbox {
+    color: #34495e;
+    font-weight: 600;
+    border-bottom: 2px solid var(--bs-primary, #0d6efd);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.inbox-message-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s ease-in-out;
+    position: relative; /* For unread dot */
+}
+
+.inbox-message-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.inbox-message-item.unread {
+    background-color: #f8f9fa; /* Slightly different bg for unread */
+    border-left: 4px solid var(--bs-primary, #0d6efd); /* Accent border for unread */
+}
+.inbox-message-item.unread .message-text {
+    font-weight: 500; /* Bolder text for unread messages */
+}
+
+.message-header {
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdfdfd; /* Slightly off-white header */
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.message-date {
+    font-size: 0.85em;
+    color: #6c757d;
+}
+
+.message-status-icon {
+    font-size: 1.1em;
+}
+.message-status-icon.fa-envelope { color: var(--bs-primary, #0d6efd); } /* Unread */
+.message-status-icon.fa-envelope-open { color: #6c757d; } /* Read */
+
+.message-body {
+    padding: 1.25rem;
+}
+
+.message-text {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    color: #343a40;
+}
+
+.message-actions {
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed #eee;
+    display: flex;
+    gap: 0.5rem; /* Spacing between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+}
+
+.message-actions .btn {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.75rem;
+}
+
+.empty-inbox-message { /* Similar to empty-reports-message */
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.empty-inbox-message i {
+    font-size: 3rem;
+    color: var(--bs-primary, #0d6efd);
+    margin-bottom: 1rem;
+}
+.empty-inbox-message p {
+    font-size: 1.1rem;
+    color: #6c757d;
+}

@@ -1,0 +1,108 @@
+/* ==========================================================================
+   1. Global Reset & Base Styles
+   ========================================================================== */
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Consistent soft background for all pages */
+    color: #343a40; /* Default dark text */
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. Layout Containers
+   ========================================================================== */
+.main-container { /* Applied to the main content area of each page */
+    flex: 1; /* Allows footer to be pushed down */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+/* If you have a truly generic container for simple pages: */
+.general-content-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.05);
+}
+
+/* ==========================================================================
+   3. Shared Components (Navbar, Footer, Pagination, Basic Table)
+   ========================================================================== */
+
+/* Bootstrap Navbar Enhancements (if these apply to ALL navbars) */
+.navbar-brand img.header-logo-img { /* Class for logo image in Bootstrap navbar */
+    height: 35px;
+    margin-right: 10px;
+}
+.navbar .nav-link .profile-icon {
+    font-size: 1.5rem;
+    color: white; /* Assuming navbar is dark */
+    transition: opacity 0.2s ease-in-out;
+}
+.navbar .nav-link:hover .profile-icon {
+    opacity: 0.8;
+}
+
+/* General page titles if you use a common class */
+.page-title {
+    color: #34495e;
+    font-weight: 600;
+    border-bottom: 2px solid var(--bs-primary, #0d6efd); /* Fallback for bs-primary */
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: auto;
+    font-size: 0.9em;
+}
+
+/* General Table Styling (Rely mostly on Bootstrap, add minor tweaks if needed globally) */
+.table { /* General tweaks for all tables */
+    margin-bottom: 1rem; /* Consistent bottom margin */
+}
+.table th, .table td {
+    vertical-align: middle;
+}
+.table-responsive {
+    margin-top: 1rem;
+}
+
+/* Pagination Active State (Common) */
+.pagination .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: var(--bs-primary, #0d6efd);
+    border-color: var(--bs-primary, #0d6efd);
+}
+
+/* Generic Header Logo (For non-Bootstrap headers like on login/register pages) */
+.header-logo {
+    height: 40px;
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+.header-logo:hover {
+    opacity: 1;
+}

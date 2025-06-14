@@ -1,0 +1,180 @@
+/* ==========================================================================
+   Admin Dashboard Specific Styles
+   ========================================================================== */
+
+/* Admin Dashboard - Main Action Navigation Cards */
+.admin-action-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Responsive grid */
+    gap: 1.5rem; /* Space between cards */
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem; /* Space before content sections */
+}
+
+.admin-action-card {
+    display: block; /* Make the whole card a link */
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease-out;
+    border: 1px solid #e0e0e0;
+    color: #343a40; /* Default text color */
+}
+
+.admin-action-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--bs-primary, #0d6efd);
+    color: var(--bs-primary, #0d6efd); /* Change text color on hover */
+}
+
+.admin-action-card .action-icon {
+    font-size: 2.5rem; /* Icon size */
+    margin-bottom: 1rem;
+    color: var(--bs-primary, #0d6efd); /* Icon color */
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    border-radius: 50%;
+    background-color: rgba(13, 110, 253, 0.1); /* Light primary background for icon */
+    display: inline-block; /* Center the icon */
+    transition: background-color 0.25s, color 0.25s;
+}
+.admin-action-card:hover .action-icon {
+    background-color: var(--bs-primary, #0d6efd);
+    color: #fff;
+}
+
+.admin-action-card h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    margin-top: 0;
+}
+
+.admin-action-card p.action-description {
+    font-size: 0.85rem;
+    color: #6c757d; /* Muted text for description */
+    margin-bottom: 0;
+    min-height: 40px; /* Ensure consistent height for description area */
+}
+
+/* Active state for admin action card (if current view matches) */
+.admin-action-card.active {
+    border-color: var(--bs-primary, #0d6efd);
+    /* box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); Bootstrap's focus ring style */
+    color: var(--bs-primary, #0d6efd);
+    background-color: #e7f1ff; /* Light primary background for active card */
+}
+.admin-action-card.active .action-icon {
+    background-color: var(--bs-primary, #0d6efd);
+    color: #fff;
+}
+
+/* Admin Dashboard - Statistics Cards */
+.stat-card { /* This class is already in admin_dashboard.php */
+    border: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15) !important;
+}
+.stat-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    text-align: center;
+}
+.stat-card .stat-icon {
+    font-size: 2.5rem;
+    opacity: 0.85;
+    margin-bottom: 0.75rem;
+}
+.stat-card .card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+    color: inherit;
+}
+.stat-card .stat-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: inherit;
+    line-height: 1.1;
+}
+
+/* Gradient Backgrounds for Stat Cards */
+.bg-c-blue { background: linear-gradient(45deg, #4099ff, #73b4ff); }
+.bg-c-green { background: linear-gradient(45deg, #2ed8b6, #59e0c5); }
+.bg-c-yellow { background: linear-gradient(45deg, #FFB64D, #ffcb80); color: #333 !important; }
+.bg-c-pink { background: linear-gradient(45deg, #FF5370, #ff869a); }
+.bg-c-purple { background: linear-gradient(45deg, #6A1B9A, #9C27B0); }
+.bg-c-orange { background: linear-gradient(45deg, #F47216, #F9A02C); }
+.bg-c-teal { background: linear-gradient(45deg, #009688, #4DB6AC); }
+.bg-c-red { background: linear-gradient(45deg, #d9534f, #f0726e); }
+.bg-c-gray { background: linear-gradient(45deg, #6c757d, #9fa6ac); }
+
+.stat-card.bg-info .card-title,
+.stat-card.bg-info .stat-number,
+.stat-card.bg-info .stat-icon { color: #000 !important; }
+.stat-card.bg-c-yellow .card-title,
+.stat-card.bg-c-yellow .stat-number,
+.stat-card.bg-c-yellow .stat-icon { color: #333 !important; }
+
+
+/* Admin Dashboard Comment Section */
+.admin-dashboard-container .comment-section { /* Scoped for admin if needed */
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    background-color: #fff;
+}
+.admin-dashboard-container .comment {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9em;
+}
+.admin-dashboard-container .comment:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.admin-dashboard-container .comment .author { font-weight: bold; }
+.admin-dashboard-container .comment .date { font-size: 0.8em; color: #6c757d; }
+
+
+/* Admin Dashboard Audit Log Table */
+.admin-dashboard-container .audit-log-details-cell { min-width: 300px; }
+.admin-dashboard-container .audit-log-summary {
+    display: inline-block;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.admin-dashboard-container .audit-log-value-modal { /* For <pre> in modal */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 70vh;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    font-size: 0.9em;
+}
+.admin-dashboard-container .btn-view-details { /* Eye icon button */
+    padding: 0.1rem 0.4rem;
+    font-size: 0.8rem;
+}
+/* For smaller eye icon if using Font Awesome's sizing classes */
+.admin-dashboard-container .fa-xs { font-size: 0.75em; }

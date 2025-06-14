@@ -1,0 +1,94 @@
+/* Styles for the Admin Create Report Page */
+
+.page-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+.page-header h2 {
+    margin: 0;
+    color: #343a40;
+}
+
+.page-header .text-muted {
+    font-size: 1rem;
+}
+
+.form-section-card {
+    margin-bottom: 1.5rem;
+}
+
+.form-section-card .card-header {
+    background-color: #e9ecef;
+    font-weight: 600;
+}
+
+/* Enhanced User Search */
+.user-search-container {
+    position: relative;
+}
+
+#userSearchResults {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-top: none;
+    border-radius: 0 0 0.375rem 0.375rem;
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+#userSearchResults .suggestion-item {
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+}
+
+#userSearchResults .suggestion-item:hover,
+#userSearchResults .suggestion-item.active {
+    background-color: #e9ecef;
+}
+
+#selected-user-card {
+    background-color: #e7f1ff;
+    border: 1px solid #b3d1ff;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+#selected-user-card .user-name {
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+#selected-user-card .user-email {
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+/* Modal Table Styling */
+#allUsersModal .modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#allUsersModal table td,
+#allUsersModal table th {
+    font-size: 0.9rem;
+}
+
+#allUsersModal .select-user-btn {
+    font-size: 0.8rem;
+    padding: 0.1rem 0.4rem;
+}

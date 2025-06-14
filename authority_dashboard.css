@@ -1,0 +1,174 @@
+/* Styles for the enhanced Authority Dashboard */
+
+body {
+    background-color: #f4f7f6; /* A slightly different, softer background */
+}
+
+.page-title {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.filter-bar {
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e9ecef;
+}
+
+/* MODAL-SPECIFIC STYLES */
+.modal-header.modal-header-auth {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+}
+.modal-header.modal-header-auth .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.report-card-auth {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-left-width: 5px;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: none; /* No shadow inside the modal */
+    transition: none;
+}
+.report-card-auth:hover {
+    box-shadow: none;
+    transform: none;
+}
+
+/* Color-coding the left border based on status */
+.report-card-auth.status-pending { border-left-color: #ffc107; }
+.report-card-auth.status-in-progress, .report-card-auth.status-assigned { border-left-color: #0d6efd; }
+.report-card-auth.status-resolved { border-left-color: #198754; }
+.report-card-auth.status-closed { border-left-color: #6c757d; }
+.report-card-auth.status-rejected { border-left-color: #dc3545; }
+.report-card-auth.status-requires-info { border-left-color: #0dcaf0; }
+.report-card-auth.status-default { border-left-color: #343a40; }
+
+
+.report-card-header-auth {
+    padding: 1rem 1.25rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.report-title-auth {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.report-body-auth {
+    padding: 1.25rem;
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+@media (min-width: 992px) {
+    .report-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.detail-box {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid #e9ecef;
+    height: 100%;
+}
+
+.detail-box h6 {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.detail-box h6 i.fas {
+    margin-right: 0.75rem;
+    color: var(--bs-primary);
+}
+
+.detail-box p, .detail-box .evidence-links {
+    font-size: 0.9rem;
+    max-height: 200px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.evidence-links a {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+.evidence-links a:hover {
+    background-color: #e9ecef;
+    text-decoration: none;
+}
+.evidence-links a i {
+    color: #6c757d;
+}
+
+.reporter-info-auth {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+}
+.reporter-info-auth li {
+    padding: 0.35rem 0;
+}
+.reporter-info-auth i {
+    width: 20px;
+    text-align: center;
+    margin-right: 0.75rem;
+    color: #6c757d;
+}
+
+.comment-section-auth {
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 0.75rem;
+    background-color: #f1f3f5;
+    border-radius: 0.375rem;
+    border-top: 2px solid var(--bs-primary);
+}
+.comment-auth {
+    background-color: #fff;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    border-left: 3px solid #ced4da;
+}
+.comment-auth .author { 
+    font-weight: 600;
+    color: #0d6efd;
+}
+.comment-auth .date { font-size: 0.8em; color: #6c757d; }
+
+.navbar.bg-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+}

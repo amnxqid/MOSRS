@@ -1,0 +1,220 @@
+/* --- Styles for index.php (Public Landing Page) --- */
+
+/* Override body background for a cleaner landing page look if desired */
+body.landing-page {
+    background-color: #fff; /* Or a very light, subtle texture/gradient */
+}
+body.landing-page .footer {
+    background-color: #1c2833; /* Slightly different dark for landing page footer */
+}
+
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--bs-primary) 0%, #0056b3 70%, #004085 100%);
+    color: white;
+    padding: 4rem 1rem; /* More padding */
+    text-align: center;
+    margin-bottom: 2.5rem; /* Space after hero */
+    border-bottom-left-radius: 50% 20px; /* Curved bottom */
+    border-bottom-right-radius: 50% 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.hero-section img.hero-logo { /* If you want a large logo in the hero */
+    max-height: 80px;
+    margin-bottom: 1.5rem;
+    filter: brightness(0) invert(1); /* Make image white if it's dark */
+}
+.hero-section h1 {
+    font-size: 2.8rem; /* Larger title */
+    font-weight: 300; /* Lighter title for modern look */
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+.hero-section .lead {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero-section .btn-cta { /* Call to action buttons */
+    font-size: 1.1rem;
+    padding: 0.75rem 1.75rem;
+    margin: 0.5rem;
+    border-radius: 50rem; /* Pill shape */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.hero-section .btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+/* Statistics Section Enhancements */
+.stats-section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+}
+.stats-section-subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 2.5rem;
+}
+
+.total-reports-display {
+    background-color: var(--bs-secondary);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.total-reports-display .display-4 {
+    font-weight: 700;
+}
+
+
+/* Chart Cards */
+.chart-card { /* Inherits from .custom-card if you use that class from global_style.css */
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden; /* Ensure chart doesn't overflow rounded corners */
+}
+.chart-card .card-header {
+    background-color: #f8f9fa;
+    font-weight: 500;
+    color: #333;
+}
+.chart-card .card-body {
+    padding: 1rem; /* Adjust as needed */
+    min-height: 420px; /* Ensure space for chart */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Data Tables within Stats Section */
+.stats-table-card {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden; /* For table responsiveness within card */
+}
+.stats-table-card .card-header {
+    background-color: #f8f9fa;
+    font-weight: 500;
+}
+.stats-table-card .table {
+    margin-bottom: 0; /* Remove default table margin if inside card */
+}
+.stats-table-card .table thead th {
+    background-color: #e9ecef; /* Light grey for table headers */
+    font-weight: 500;
+    color: #333;
+}
+.stats-table-card .table tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.05); /* Subtle hover for table rows */
+}
+
+
+/* Enhanced Contact Us Box */
+.contact-us-box-enhanced {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.contact-us-box-enhanced:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.contact-us-box-enhanced i.contact-icon {
+    font-size: 3rem;
+    color: var(--bs-primary);
+    margin-bottom: 1rem;
+    background-color: rgba(0,123,255,0.1);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+}
+.contact-us-box-enhanced h5 {
+    margin-bottom: 0.5rem;
+    color: #343a40;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.contact-us-box-enhanced p {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #495057;
+}
+.contact-us-box-enhanced .phone-number-lg { /* Larger phone number */
+    font-weight: 700;
+    font-size: 2.5rem; /* Larger font */
+    color: var(--bs-primary);
+    display: block;
+    margin-top: 0.75rem;
+    letter-spacing: -1px;
+}
+.contact-us-box-enhanced .phone-link { text-decoration: none; }
+
+/* Floating Chatbot Button (Keep your existing styles if they work) */
+#chatbot-toggle-link {
+    /* Your existing styles are good, ensure they are in global_style.css or here */
+    background-color: var(--bs-primary); /* Ensure it uses primary color */
+    /* ... other styles ... */
+}
+#chatbot-toggle-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--bs-primary, #0d6efd); /* Use Bootstrap primary or your theme color */
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    z-index: 1050;
+    transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, background-color 0.25s ease-out;
+    border: 2px solid transparent; /* For potential border animation on hover */
+}
+
+#chatbot-toggle-link i {
+     font-size: 1.6rem; /* Slightly larger icon */
+     transition: transform 0.2s ease-in-out;
+}
+
+#chatbot-toggle-link:hover {
+    transform: translateY(-3px) scale(1.05); /* Lift and slightly enlarge */
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    background-color: #0056b3; /* Darker shade of primary, adjust if using a different var(--bs-primary) */
+    color: white; /* Keep text white */
+}
+
+#chatbot-toggle-link:hover i {
+    transform: scale(1.1); /* Slightly grow the icon on hover */
+}
+
+/* Optional: Active state when clicked */
+#chatbot-toggle-link:active {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+}
