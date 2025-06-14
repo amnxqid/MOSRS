@@ -27,8 +27,8 @@ function sendNotificationEmail(string $recipientEmail, string $subject, string $
     $mail->isSMTP();                       // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';  // Gmail SMTP server
     $mail->SMTPAuth   = true;              // Enable SMTP authentication
-    $mail->Username   = 'zikryamin.se2425@gmail.com'; // Your Gmail address
-    $mail->Password   = 'cqdx ycqa szdz ofpb';        // Your Gmail App Password
+    $mail->Username   = 'YOUR EMAIL'; // Your Gmail address
+    $mail->Password   = 'YOU APP PASSWORD';        // Your Gmail App Password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable implicit TLS encryption
     $mail->Port       = 465;                 // TCP port for SMTPS
 
