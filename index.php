@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && strpos($_SERVER['CONTENT_TYPE'] ?? 
     header('Content-Type: application/json');
     header('Cache-Control: no-cache');
     // --- PASTE YOUR GOOGLE AI STUDIO API KEY HERE ---
-    $googleApiKey = 'AIzaSyAkkNnwwS_xUCLB5yEDRkviKbvDcqmHkbM';
+    $googleApiKey = 'YOUR API KEY';
     // ----------------------------------------------
 
     // --- Grounding Knowledge Base (Source of Truth for MOSRS) ---
